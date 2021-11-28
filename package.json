@@ -21,6 +21,6 @@
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
-    "@types/shortid": "0.0.29"
+    "@types/shortid": "^0.0.29"
   }
 }

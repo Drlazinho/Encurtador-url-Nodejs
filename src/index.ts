@@ -1,5 +1,11 @@
-import express, { Request, Response} from 'express'
+import { URLController } from './controller/URLController';
+import express from 'express'
 
+const api = express();
+api.use(express.json())
 
-const api = express()
-api.listen(3000, () => console.log('Executando'))
+const urlController = new URLController()
+api.post('/shorten', urlController.shorten)
+api.get('/:hash', urlController.redirect)
+
+api.listen(5000, () => console.log('Executando'));
